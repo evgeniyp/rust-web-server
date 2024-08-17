@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  rust-webserver:
+    build: .
+    volumes:
+      - .:/src
+      # - /usr/src/app/target
+      # - /usr/src/app/Cargo.lock
+    ports:
+      - "7878:7878"
+    command: cargo watch -x 'run --release'
+    tty: true # Allocate a pseudo-TTY
+    stdin_open: true # Keep stdin open even if not attached
