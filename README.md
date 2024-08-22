@@ -8,4 +8,4 @@
 
 `cargo watch -x 'run --release'` to run in release mode with watch
 
-`docker-compose up --build` to run in docker
+`docker compose up --build` to run in docker

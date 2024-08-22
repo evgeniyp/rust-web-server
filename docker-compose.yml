@@ -5,4 +5,4 @@ services:
       - .:/app
     ports:
       - "7878:7878"
-    command: sh -c "cargo watch --init --why -x \"run --release\""
+    command: sh -c "cargo watch --why -x \"run --release\""
