@@ -32,8 +32,7 @@ fn handle_connection(mut stream: TcpStream) {
     } else if buffer.starts_with(sleep) {
         thread::sleep(std::time::Duration::from_secs(5));
         ("HTTP/1.1 200 OK", "index.html")
-    }
-    else {
+    } else {
         ("HTTP/1.1 404 NOT FOUND", "404.html")
     };
 
